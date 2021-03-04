@@ -1,0 +1,36 @@
+Nume: Tiriplica Vlad
+Grupa: 331CA
+Titlu: Tema LFA
+###############################################################################
+Voi explica functionalitatea fiecarei functii:
+
+int2base(x, base):
+	- converteste int-ul x intr-o reprezentare in baza base de tip string
+
+checkInput(input, base):
+	- verifica daca string-ul primit ca input este valid in baza base
+
+translateInstruction(instruction):
+	- primeste un string de 4 caractere (sau o lista de 4 elemente in unele
+cazuri) pe care il traduce intr-un cod ce reprezinta una din instructiunile
+valabile (codul este generat folosind reprezentarea in baza 3 a instructiunii)
+
+parseCode(instructions):
+	- citeste din fisierul de input cate 4 caractere pe care le traduce
+folosind functia de mai sus intr-un cod specific instructiunii
+	- acest cod il adauga la finalul liste instructions formand astfel lista
+tuturor instructiunilor programului
+	- de asemenea face verificarile sintactice asupra codului
+
+runInstruction(instruction, stack, i, instructions, base):
+	- ruleaza instructiunea instruction modificand corespunzator stiva si
+program counter-ul (i)
+	- de asemenea afiseaza exceptiile in cazul in care exista si opreste
+programul
+
+runProgram(instructions, base):
+	- creeaza stiva si ruleaza pe rand fiecare instructiune din program
+
+main():
+	- citeste baza data ca parametru si apeleaza functiile parseCode() si
+runProgram()
